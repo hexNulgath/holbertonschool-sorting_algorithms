@@ -31,6 +31,8 @@ void quick_sort_rec(int *array, size_t lo, size_t hi, size_t size)
 	temp = array[i];
 	array[i] = array[pivot];
 	array[pivot] = temp;
+	if (i != pivot)
+		print_array(array, size);
 	if (i > 0)
 		quick_sort_rec(array, lo, i - 1 , size);
 	quick_sort_rec(array, i + 1, hi, size);

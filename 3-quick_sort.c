@@ -26,12 +26,12 @@ void quick_sort_rec(int *array, size_t hi, size_t lo, size_t size)
 				array[pivot] = array[i];
 				array[i] = temp;
 			}
+			print_array(array, size);
 			pivot = pivot - 1;
 		}
 		else
 			i++;
 	}
-	print_array(array, size);
 	if (pivot > lo)
 	{
 		quick_sort_rec(array, pivot - 1, lo, size);
